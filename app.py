@@ -15,7 +15,7 @@ DOMAIN = os.getenv("DOMAIN")
 token = ""
 
 
-@app.route('/api/v1/user/<str:username>', methods=['GET'])
+@app.route('/api/v1/user/<string:username>', methods=['GET'])
 def process(username):
     global token
     # Step 2: Send a request to a given URL with the `id`

@@ -49,8 +49,8 @@ def process_data(user):
 
 
 def sign_up():
-    username = os.getenv("username")
-    password = os.getenv("password")
+    username = os.getenv("USERNAME")
+    password = os.getenv("PASSWORD")
     global token
 
     res = requests.post(DOMAIN + "/api/admin/token", data={"username": username, "password": password})
@@ -62,4 +62,4 @@ def sign_up():
 
 if __name__ == '__main__':
     sign_up()
-    app.run(host="", port=5000)
+    app.run(host="127.0.0.1", port=12000)
